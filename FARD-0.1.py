@@ -90,42 +90,13 @@ class TransferGlyph:
         xmove = base_left - paste_middle
         return xmove * xxmove
 
-    def find_right_x_at_bottom_y(self, base_layer, paste_layer, xxmove):
-        xpos = base_layer.boundingBox()
-        ypos = paste_layer.boundingBox()
-
-        ytop = ypos[3]
-        xtop_bounds = paste_layer.xBoundsAtY(ytop)
-
-        xtop = self.find_nearest_point_top_to_bottom(paste_layer, xtop_bounds, ytop)
-        base_right = xpos[2]
-        xmove = base_right - xtop[1]
-        return xmove * xxmove
-
-    def find_right_x_at_top_y(self, base_layer, paste_layer, coefficient2, xxmove):
-        base = base_layer.boundingBox()
-        paste = paste_layer.boundingBox()
-
-        ytop = base[3]
-        ytop_bounds = base_layer.xBoundsAtY(ytop)
-        base_top = self.find_nearest_point_top_to_bottom(base_layer, ytop_bounds, ytop)
-
-        if base_top[0] < base_top[1]:
-            base_top_point = base_top[1]
-        else:
-            base_top_point = base_top[0]
-
-        paste_whole = paste[2]
-
-        xmove = (base_top_point - paste[0]) + (paste_whole * coefficient2)
-        return xmove * xxmove
 
 ############ ------------------------------------ #############
 ############ ------------------------------------ #############
 ############ ~2000 koda rindiņas ---------------- #############
 ############ noņemtas, koncepta prezentācijas --- #############
 ############ nolūkos, lai saglabātu vairumu no -- #############
-############ autora intelektuālā īpašuma privātu. #############
+############ autora intelektuālā īpašuma privātu- #############
 ############ ------------------------------------ #############
 ############ ------------------------------------ #############
 
