@@ -98,6 +98,7 @@ class TransferGlyph:
 ############ nolūkos, lai saglabātu specifiku no  #############
 ############ autora intelektuālā īpašuma privātu. #############
 ############ ------------------------------------ #############
+############ Kontaktēt: valters.veide@gmail.com - #############
 ############ ------------------------------------ #############
 
 upsideE = TransferGlyph(101)
